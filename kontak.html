@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Layout Web</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="mediaqueries.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(function() {
+                var pull        = $('#pull'); 
+                    menu        = $('nav ul'); 
+
+                $(pull).on('click', function(e) {
+                    e.preventDefault();
+                    menu.slideToggle();
+                });
+                $(window).resize(function(){
+                    var w = $(window).width();
+                    if(w > 600 && menu.is(':hidden')) {
+                        menu.removeAttr('style');
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <img src="images/logo1.png" alt="logo"/>
+                <form>
+                    <input type="text" id="search" name="search" placeholder="  Search . . ." />
+                </form>
+                <h1>Freditya Corporation</h1>
+            </header>
+            <nav class="clearfix">
+                <a href="#" id="pull">Menu</a>
+                <ul class="clearfix">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="kontak.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <section>
+                <div class="artikel-all">
+                    <h3>Send us a message</h3>
+                    <div class="form_contact">
+                     <form class="form"> 
+                      <p class="name"> 
+                            <input type="text" name="nama" id="nama" placeholder="Nama" /> 
+                            <label for="nama">Nama</label> 
+                        </p> 
+                       
+                        <p class="email"> 
+                            <input type="email" name="email" id="email" placeholder="E-mail"/> 
+                            <label for="email">E-mail</label> 
+                        </p> 
+                       
+                        <p class="telp"> 
+                            <input type="number" name="telp" id="telp" placeholder="No Telephone"/> 
+                            <label for="telp">Telephone</label> 
+                        </p> 
+
+                        <p class="topic"> 
+                            <input type="text" name="topic" id="topic" placeholder="topic"/> 
+                            <label for="topic">Topic</label> 
+                        </p>
+                       
+                        <p class="text"> 
+                            <textarea name="text" placeholder="Pesan anda"></textarea> 
+                        </p> 
+                       
+                        <p class="submit"> 
+                            <input type="submit" name="submit" value="Submit" /> 
+                        </p>    
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+           <aside class="sidebar">
+                
+                    <h2>Kategori</h2>
+            
+                <div class="kategori">
+                    
+                         <ul class="menu">
+                            <li><a href="kat1.html">&nbsp; HTML & CSS</a></li>
+                            <li><a href="kat2.html">&nbsp; Javascript</a></li>
+                           <li><a href="#">&nbsp; Photoshop</a></li>
+                                <li><a href="#">&nbsp; Inspirasi</a></li>
+                                <li><a href="#">&nbsp; Berita</a></li>
+                                <li><a href="#">&nbsp; Off Topic</a></li>
+                        </ul>
+                    
+                </div>
+            </aside>
+            <footer>
+                <p>Desain Web Copyright &copy; 2017 Freditya Margianto</p>
+            </footer> 
+        </div>
+    </body>
+</html>

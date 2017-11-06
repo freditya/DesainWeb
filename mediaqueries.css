@@ -1,0 +1,136 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12 Okt 17, 15:38:07
+    Author     : lk3no14uty
+*/
+
+@media screen and (max-width: 600px) {
+    nav {
+        height: auto;
+        border-bottom: 0;
+        background: #00BFFF;
+    }
+    nav ul {
+        width: 100%;
+        display: none;
+        height: auto;
+    }
+    nav li {
+        width: 100%;
+        float: none;
+        display: block;
+        background: #ffffff;
+    }
+    nav li a {
+        border-bottom: 1px solid #f0f0f0;
+        border-right: 1px solid #f0f0f0;
+    }
+    nav a {
+        text-align: left;
+        width: 100%;
+        text-indent: 25px;
+        color: #333333;
+    }
+    nav a#pull {
+        display: block;
+        background-color: #00BFFF;
+        width: 100%;
+        position: relative;
+        color: #ffffff;
+    }
+    nav a#pull:after {
+        content:"";
+        background: url(images/nav-icon.png) no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .wrapper{
+        width: 94%;
+    }
+    section{
+        width: 65%;
+    }
+    aside{
+        width: 30%;
+    }
+    
+}
+@media screen and (max-width: 700px){
+    section{
+        width: 65%;
+        float: none;
+    }
+    aside{
+        width: 30%;
+        float: none;
+    }
+    
+}
+@media screen and (max-width: 480px){
+    header{
+        height: auto;
+    }
+    #h1{
+        font-size: 24px;
+    }
+    #h2{
+        font-size: 24px;
+    }
+    aside{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 980px){
+    .wrapper{
+        width: 96%;
+    }
+    section{
+        width: 66%;
+    }
+    aside{
+        width: 30%;
+    }
+    
+}
+@media screen and (max-width: 700px){
+    section{
+        width: auto;
+        float: none;
+    }
+    aside{
+        width: auto;
+        float: none;
+    }
+    
+}
+@media screen and (max-width: 480px){
+    header{
+        height: auto;
+    }
+    #h1{
+        font-size: 24px;
+    }
+    #h2{
+        font-size: 24px;
+    }
+    aside{
+        display: none;
+    }
+}
+
+
+
+

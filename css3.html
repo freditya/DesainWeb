@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="id">
+    <head>
+        <title>Layout Web</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="mediaqueries.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+        $(function() {
+            var pull        = $('#pull'); 
+                menu        = $('nav ul'); 
+
+            $(pull).on('click', function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+            $(window).resize(function(){
+                var w = $(window).width();
+                if(w > 600 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <img src="images/logo1.png" alt="logo"/>
+                <form>
+                    <input type="text" id="search" name="search" placeholder="  Search . . ." />
+                </form>
+                <h1>Freditya Corporation</h1>
+            </header>
+            <nav class="clearfix">
+                <a href="#" id="pull">Menu</a>
+                <ul class="clearfix">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="kontak.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <section>
+                <div class="artikel-all">
+                    <img src="images/css3.png" alt="gambar artikel"/>
+                    <h2>CSS 3</h2>
+                    <b>Nov 05, 2017</b><b>views : 4,567,234</b>
+                    <p> &emsp; CSS3 adalah Cascading Style Sheet versi ke 3, yaitu pengatur dan pengendali tampilan sebuah halaman blog/ web.<br/>
+
+                    CSS3 melakukan penataan terhadap komponen HTML maupun XHTML pada halaman web sehingga menghasilkan tampilan yang ramah dimata atau retina friendly.
+                    CSS versi ketiga dapat melakukan berbagai pemutakhiran terhadap kemampuannya beradaptasi dengan teknologi multimedia yang semakin modern. Kemampuan yang di milki CSS3 antara lain:
+                <br/>
+
+                        &emsp; CSS3 mampu membuat efek animasi secara independent tanpa membutuhkan software tambahan seperti Adobe Flash dan Microsoft Silverlight. Karena hanya menggukakan kode kode maka web tidak akan berat atau tidak lama dan tidak boros kuota untuk membukanya.
+                        CSS3 mampu memberikan efek grafis terhadap teks, kolom, table serta penataan huruf.
+                        CSS3 mampu menampilkan berbagai macam dan jenis huruf selain web-safe fonts.
+                        CSS3 mampu merekonstruksi secara visual tampilan block, seperti merubah ukuran kotak, transformasi 2D/ 3D, memberikan efek sudut (radius) dan shadow (bayangan).
+                        CSS3 mampu memanipulasi secara visual warna, desain maupun tekstur suatu halaman HTML atau XHTML.<br/>
+
+                        Kelebihan dan Kekurangan CSS3,<br/>
+                        Kelebihan : <br/>
+
+                        Dapat Mengatur dan mempercantik interface website.
+                        Jika ingin membuat file CSS3 sebaiknya menggunakan CSS external atau terpisah dari file html dan dapat dipanggil di file html. Hal ini dapat mempermudah kita jika terjadi pengeditan koding.
+                        Dengan CSS3, situs website dapat berkembang dan lebih interaktif lagi.
+                        Bisa mengurangi ukuran file yang akan di-load dan akan menjadi lebih ringan.
+                        Lebih mudah dan simple serta dapat menghindari penggunaan tag yang berulang-ulang.
+                        Banyak yang beranggapan bahwa peran jQuery sudah tidak dibutuhkan lagi setelah CSS3 semakin berkembang kedepannya. Apalagi dari segi size, jQuery jauh lebih besar. Tidak hanya jQuery saja, peran Flash saja sudah tergantikan dengan adanya CSS3.<br/>
+
+
+                        Kekurangan :<br/>
+
+                        Kodingnya berbeda dengan versi sebelumnya.
+                        Koding dari setiapBrowser berbeda. karena kita harus membuat koding dari seluruh Browser satu persatu.
+                        Dibutuhkan waktu lebih lama untuk membuatnya.<br/>
+
+
+                    &emsp; Sekian informasi dari saya. mulai besok saya akan mengupload artikel2 mengenai CSS3, dapat di ketahui bahwa  Tag CSS ataupun HTML dapat di pakai untuk mengubah situs blog anda jadi jangan ragu2 untuk belajar. Mungkin saja apa yang kalian pelajari hari ini, bisa berguna di masa yang akan datang. Terimakasi telah berkunjung, tetaplah mencoba dan salam NGAEWEB.
+ </p>
+                </div>
+            </section>
+            
+            <aside class="sidebar">
+                    <h2>Kategori</h2>
+                <div class="kategori">
+                    
+                         <ul class="menu">
+                            <li><a href="kat1.html">&nbsp; HTML & CSS</a></li>
+                            <li><a href="kat2.html">&nbsp; Javascript</a></li>
+                            <li><a href="#">&nbsp; Photoshop</a></li>
+                                <li><a href="#">&nbsp; Inspirasi</a></li>
+                                <li><a href="#">&nbsp; Berita</a></li>
+                                <li><a href="#">&nbsp; Off Topic</a></li>
+                        </ul>
+                    
+                </div>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                        <h2>Artikel Pilihan</h2>
+                <div class="pilihan"> 
+                <img src="images/html5.png" alt="gambar artikel"/>           
+                <a href="html5.html">HTML5 adalah sebuah bahasa markah untuk menstrukturkan dan menampilkan isi..</a><br/><br/>
+                <img src="images/css3.png" alt="gambar artikel"/>           
+                <a href="css3.html">CSS3 adalah Cascading Style Sheet versi ke 3, yaitu pengatur dan pengendali..</a>
+
+                </div>
+            </aside>
+            <footer>  
+                <p>Desain Web Copyright &copy; 2017 Freditya Margianto</p>
+            </footer>
+        </div>
+    </body>
+</html>

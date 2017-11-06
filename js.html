@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="id">
+    <head>
+        <title>Layout Web</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="mediaqueries.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+        $(function() {
+            var pull        = $('#pull'); 
+                menu        = $('nav ul'); 
+
+            $(pull).on('click', function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+            $(window).resize(function(){
+                var w = $(window).width();
+                if(w > 600 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <img src="images/logo1.png" alt="logo"/><form>
+                    <input type="text" id="search" name="search" placeholder="  Search . . ." />
+                </form>
+                <h1>Freditya Corporation</h1>
+            </header>
+            <nav class="clearfix">
+                <a href="#" id="pull">Menu</a>
+                <ul class="clearfix">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="kontak.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <section>
+                <div class="artikel-all">
+                    <img src="images/js.png" alt="gambar artikel"/>
+                    <h2>Java Script</h2>
+                    <b>Okt 15, 2017</b><b>views : 3,437,192</b>
+                    <p> &emsp; JavaScript adalah bahasa pemrograman yang bisa disisipkan ke HTML seperti halnya PHP akan tetapi javascript berjalan di sisi Client. Misalnya, jam ditampilkan pada halaman yang update sendiri untuk menunjukkan waktu saat ini pada komputer pengguna. Desain JavaScript dipengaruhi oleh banyak bahasa pemrograman, termasuk C, tetapi dimaksudkan untuk lebih digunakan oleh non-programmer. JavaScript tidak didasarkan pada atau terkait ke Java, ini adalah kesalahpahaman umum. JavaScript seringkali disertakan dalam file HTML atau link dari file HTML dan dijalankan secara lokal oleh web browser. Ini berarti bahwa server bebas untuk mengerjakan sesuatu yang lain daripada pemrosesan instruksi untuk setiap klien. Hal ini telah membuat JavaScript pilihan yang lebih populer daripada bahasa yang memerlukan server untuk melakukan pengolahan.<br/>
+                    Sejarah Javascript<br/>
+
+                    &emsp; JavaScript pertama kali dikembangkan oleh Brendan Eich dari Netscape dibawah nama Mocha, yang nantinya namanya diganti menjadi LiveScript, dan akhirnya menjadi JavaScript.
+                    Navigator sebelumnya telah mendukung Java untuk lebih bisa dimanfaatkan para programmer yang non-Java. Maka dikembangkanlah bahasa pemrograman bernama LiveScript untuk mengakomodasi hal tersebut. Bahasa pemrograman inilah yang akhirnya berkembang dan diberi nama JavaScript, walaupun tidak ada hubungan bahasa antara Java dengan JavaScript.
+                    JavaScript bisa digunakan untuk banyak tujuan, misalnya untuk membuat efek rollover baik di gambar maupun teks, dan yang penting juga adalah untuk membuat AJAX.[6] JavaScript adalah bahasa yang digunakan untuk AJAX.<br/>
+
+                    Beberapa contoh menggunakan adalah:<br/>
+
+                        berputar atau bergulir teks.
+                        membuat bagian dari suatu bentuk terlihat atau tidak terlihat. Sebagai contoh, dalam sebuah formulir pemesanan, jika pengguna kutu kotak centang “menyampaikan kepada alamat yang berbeda”, bagian ekstra dengan kotak teks dengan streetname pengiriman, nomor, dan tempat dapat dibuat terlihat.
+                        drop down menu.
+                        mengambil informasi tambahan dari server (Ajax) untuk sebagian me-refresh halaman.
+                        memvalidasi input pengguna pada formulir.
+                        perhitungan tanpa perlu kembali ke server.
+                        menentukan jenis browser.
+
+                    jelas beberapa informasi dari jenis tertentu dari pengguna, seperti alamat email dari bot.<br/>
+
+                    &emsp; Bahasa server-side seperti PHP atau Perl adalah cara terbaik untuk memodifikasi halaman sebelum loading, meskipun ada beberapa kasus Server-JavaScript (SJS). Tidak semua browser memiliki juru JavaScript (seperti browser hanya teks Lynx), atau menjalankan versi terbaru. Selain itu, beberapa pengguna mematikan kemampuan JavaScript dengan pilihan. Umumnya, halaman web harus menggunakan JavaScript untuk meningkatkan pengalaman pengguna, bukan bergantung padanya. Hal ini sering disebut sebagai degradasi anggun (yaitu jika pengguna telah dimatikan JavaScript, halaman harus selalu masih beban, menyajikan informasi yang sama tetapi tanpa fungsi tambahan yang disediakan oleh JavaScript.)
+                    Hubungan ke Java.<br/>
+
+                    &emsp; Meskipun nama yang mirip, Java dan JavaScript, hampir tidak ada hubungannya selain dari sintaks antara dua bahasa. Bahkan mereka dikembangkan oleh dua perusahaan yang sama sekali berbeda, dengan tujuan dan pemikiran yang berbeda: Netscape mengembangkan JavaScript dan Sun Microsystems mengembangkan Java. Hanya saja kedua nama tersebut membingungkan bagi orang yang belum tau. <br/>
+
+                    &emsp; JavaScript dapat diinterpretasikan oleh browser yang paling  langsung dan cepat, sementara Java memerlukan terpisah “Java Virtual Machine” harus dimulai sebelum menjalankan. JavaScript dan Java sama-sama menggunakan sintaks yang mirip (berdasarkan bahasa C) tetapi perintah yang digunakan banyak yang sangat berbeda. Ada juga perbedaan teknis. Java adalah bahasa diketik statis yang membutuhkan deklarasi semua variabel dan jenis mereka (misalnya integer, string atau boolean). Sebaliknya, Javascript adalah “longgar” bahasa diketik, memungkinkan variabel yang akan digunakan tanpa deklarasi sebelumnya. <br/>
+
+                    &emsp; Sebagai contoh, membandingkan dua metode penulisan ke tampilan (halaman).
+                    Di Java, untuk menulis “Halo dunia!”, Kode akan membaca: System.out.println (“Halo dunia!”);
+                    Sedangkan dalam JavaScript (di browser), akan berkata: document.write (“Halo dunia! “);</p>
+                </div>
+            </section>
+            
+            <aside class="sidebar">
+                
+                    <h2>Kategori</h2>
+            
+                <div class="kategori">
+                    
+                         <ul class="menu">
+                            <li><a href="kat1.html">&nbsp; HTML & CSS</a></li>
+                            <li><a href="kat2.html">&nbsp; Javascript</a></li>
+                            <li><a href="#">&nbsp; Photoshop</a></li>
+                                <li><a href="#">&nbsp; Inspirasi</a></li>
+                                <li><a href="#">&nbsp; Berita</a></li>
+                                <li><a href="#">&nbsp; Off Topic</a></li>
+                        </ul>
+                    
+                </div>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                
+                        <h2>Artikel Pilihan</h2>
+                
+                <div class="pilihan">    
+                <img src="images/html5.png" alt="gambar artikel"/>           
+                <a href="html5.html">HTML5 adalah sebuah bahasa markah untuk menstrukturkan dan menampilkan isi..</a>
+            <br/><br/>
+                <img src="images/css3.png" alt="gambar artikel"/>           
+                <a href="css3.html">CSS3 adalah Cascading Style Sheet versi ke 3, yaitu pengatur dan pengendali..</a>  
+
+                </div>
+            </aside>
+            <footer>  
+                <p>Desain Web Copyright &copy; 2017 Freditya Margianto</p>
+            </footer>
+        </div>
+    </body>
+</html>

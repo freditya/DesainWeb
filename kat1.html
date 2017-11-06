@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Layout Web</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="mediaqueries.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+        $(function() {
+            var pull        = $('#pull'); 
+                menu        = $('nav ul'); 
+
+            $(pull).on('click', function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+            $(window).resize(function(){
+                var w = $(window).width();
+                if(w > 600 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <img src="images/logo1.png" alt="logo"/>
+                <form>
+                    <input type="text" id="search" name="search" placeholder="  Search . . ." />
+                </form>
+                <h1>Freditya Corporation</h1>
+            </header>
+            <nav class="clearfix">
+                <a href="#" id="pull">Menu</a>
+                <ul class="clearfix">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="kontak.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <section>
+                <div class="artikel-all">
+                    <img src="images/HTML5.png" alt="gambar artikel"/>
+                    <h2>Pengertian HTML 5</h2>
+                    <b>Nov 01, 2017</b><b>views : 3,487,497</b>
+                    <p>HTML5 adalah sebuah bahasa markah untuk menstrukturkan dan menampilkan isi dari Waring Wera Wanua, sebuah teknologi inti dari Internet. HTML5 adalah revisi kelima dari HTML.</p>
+                    <a href="html5.html" class="next">Selengkapnya</a>
+                </div>
+                <div class="artikel-all">
+                    <img src="images/css3.png" alt="gambar artikel"/>
+                    <h2>Apa itu CSS 3</h2>
+                    <b>Nov 05, 2017</b><b>views : 4,567,234</b>
+                    <p>CSS3 adalah Cascading Style Sheet versi ke 3, yaitu pengatur dan pengendali tampilan sebuah halaman blog/ web.</p>
+                    <a href="css3.html" class="next">Selengkapnya</a>
+                </div>
+            </section>
+            
+            <aside class="sidebar">
+                
+                    <h2>Kategori</h2>
+            
+                <div class="kategori">
+                    
+                         <ul class="menu">
+                            <li><a href="kat1.html">&nbsp; HTML & CSS</a></li>
+                            <li><a href="kat2.html">&nbsp; Javascript</a></li>
+                            <li><a href="#">&nbsp; Photoshop</a></li>
+                                <li><a href="#">&nbsp; Inspirasi</a></li>
+                                <li><a href="#">&nbsp; Berita</a></li>
+                                <li><a href="#">&nbsp; Off Topic</a></li>
+                        </ul>
+                    
+                </div>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                
+                        <h2>Artikel Pilihan</h2>
+                
+                <div class="pilihan">    
+                <img src="images/html5.png" alt="gambar artikel"/>           
+                <a href="html5.html">HTML5 adalah sebuah bahasa markah untuk menstrukturkan dan menampilkan isi..</a>
+            <br/><br/>
+                <img src="images/css3.png" alt="gambar artikel"/>           
+                <a href="css3.html">CSS3 adalah Cascading Style Sheet versi ke 3, yaitu pengatur dan pengendali..</a>   
+
+                </div>
+            </aside>
+            <footer>  
+                <p>Desain Web Copyright &copy; 2017 Freditya Margianto</p>
+            </footer>
+        </div>
+    </body>
+</html>
